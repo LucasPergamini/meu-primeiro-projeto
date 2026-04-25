@@ -1,5 +1,5 @@
-import Status from './Status';
-import Pedidos from './Pedidos';
+import Status from '../../components/Status/Status';
+import Pedidos from '../../components/Pedidos/Pedidos';
 import './Profile.css';
 
 type ProfileProps = {
@@ -46,7 +46,7 @@ export default function Profile({ email, onLogout, onBackToProducts }: ProfilePr
       </section>
 
       <Status email={email} />
-      <Pedidos email={email} />
+      <Pedidos />
     </div>
   );
 }

@@ -2,10 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Pedidos.css';
 
-type PedidosProps = {
-  email: string;
-};
-
 type Order = {
   id: number;
   products: string; // JSON string
@@ -13,7 +9,7 @@ type Order = {
   created_at: string;
 };
 
-export default function Pedidos({ }: PedidosProps) {
+export default function Pedidos() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
 

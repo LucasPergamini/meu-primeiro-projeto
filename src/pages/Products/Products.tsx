@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from 'react';
 import './Products.css';
-import { fetchFakeStoreProducts, type FakeStoreProduct } from './services/fakeStoreApi';
+import { fetchFakeStoreProducts, type FakeStoreProduct } from '../../services/fakeStoreApi';
 
 type CartProduct = {
   id: number;

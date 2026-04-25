@@ -1,9 +1,9 @@
-﻿import { useState, useEffect } from 'react';
-import Header from './Header';
-import Login from './Login';
-import Profile from './Profile';
-import Carrinho from './Carrinho';
-import Products from './Products';
+﻿import { useState } from 'react';
+import Header from './components/Header/Header';
+import Login from './components/Login/Login';
+import Profile from './pages/Profile/Profile';
+import Carrinho from './components/Carrinho/Carrinho';
+import Products from './pages/Products/Products';
 import './App.css';
 
 type CartItem = {
@@ -18,19 +18,18 @@ type CartProduct = Omit<CartItem, 'quantity'>;
 
 const App: React.FC = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [userName, setUserName] = useState<string | null>(null);
+  const [userName, setUserName] = useState<string | null>(() => {
+    const user = localStorage.getItem('user');
+    if (!user) return null;
+    try {
+      return JSON.parse(user).username;
+    } catch {
+      return null;
+    }
+  });
   const [currentView, setCurrentView] = useState<'products' | 'profile'>('products');
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    const user = localStorage.getItem('user');
-    if (token && user && !userName) {
-      const userData = JSON.parse(user);
-      setUserName(userData.username);
-    }
-  }, [userName]);
 
   const handleLoginClick = () => {
     setIsLoginOpen(true);
@@ -40,12 +39,8 @@ const App: React.FC = () => {
     setIsLoginOpen(false);
   };
 
-  const handleLogin = (_email: string) => {
-    const user = localStorage.getItem('user');
-    if (user) {
-      const userData = JSON.parse(user);
-      setUserName(userData.username);
-    }
+  const handleLogin = (email: string) => {
+    setUserName(email);
     setIsLoginOpen(false);
   };
 
