@@ -1,0 +1,136 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px;
+  background: var(--color-cream);
+  border-bottom: 1px solid var(--color-tan);
+  font-family: Georgia, serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-image {
+  height: 80px;
+  width: 80px;
+  max-width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--color-dark-brown);
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--color-tan);
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-brown);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--color-cream);
+  color: var(--color-brown);
+  border: 1px solid var(--color-tan);
+  font-size: 0.95rem;
+}
+
+.header-button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.icon-button {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.button-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.profile-button {
+  background: var(--color-brown);
+  color: var(--color-offwhite);
+}
+
+.header-cart-button {
+  background: var(--color-offwhite);
+  color: var(--color-dark-brown);
+  border: 1px solid var(--color-tan);
+  position: relative;
+}
+
+.cart-count {
+  background: var(--color-tan);
+  color: var(--color-offwhite);
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 20px;
+  text-align: center;
+}
+
+
+.header-button:hover,
+.header-cart-button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}

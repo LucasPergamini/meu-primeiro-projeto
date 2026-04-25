@@ -1,0 +1,37 @@
+:root {
+  --color-offwhite: rgb(254, 254, 254);
+  --color-cream: rgb(226, 218, 212);
+  --color-tan: rgb(174, 142, 120);
+  --color-brown: rgb(130, 107, 92);
+  --color-dark-brown: rgb(92, 72, 59);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-image: url('./data/fundo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--color-dark-brown);
+}
+
+body {
+  font-family: Georgia, serif;
+}
+
+#root {
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+}
+
+

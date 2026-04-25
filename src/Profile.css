@@ -1,0 +1,110 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+  max-width: 920px;
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: var(--color-offwhite);
+  border: 2px solid var(--color-dark-brown);
+  border-radius: 18px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-offwhite);
+  background: var(--color-brown);
+}
+
+.profile-name {
+  margin: 0 0 6px;
+  color: var(--color-dark-brown);
+  font-size: 1.75rem;
+}
+
+.profile-email {
+  margin: 0;
+  color: var(--color-brown);
+  font-size: 0.98rem;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.profile-detail-item {
+  padding: 16px;
+  background: var(--color-cream);
+  border-radius: 14px;
+  border: 1px solid var(--color-tan);
+}
+
+.profile-detail-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--color-brown);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.profile-detail-value {
+  color: var(--color-dark-brown);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-back-button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px 20px;
+  background: var(--color-tan);
+  color: var(--color-offwhite);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.profile-back-button:hover {
+  background: var(--color-brown);
+}
+
+.profile-logout-button {
+  border: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  background: var(--color-tan);
+  color: var(--color-offwhite);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.profile-logout-button:hover {
+  background: var(--color-brown);
+}

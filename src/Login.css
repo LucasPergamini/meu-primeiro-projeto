@@ -1,0 +1,113 @@
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(92, 72, 59, 0.55);
+  padding: 24px;
+  z-index: 1000;
+}
+
+.login-modal {
+  width: min(460px, 100%);
+  background: var(--color-offwhite);
+  border: 2px solid var(--color-dark-brown);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  padding: 32px;
+  position: relative;
+}
+
+.login-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--color-dark-brown);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.login-header {
+  margin-bottom: 24px;
+}
+
+.login-title {
+  margin: 0 0 10px;
+  color: var(--color-dark-brown);
+  font-size: 1.9rem;
+}
+
+.login-description {
+  margin: 0;
+  color: var(--color-brown);
+  line-height: 1.7;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-brown);
+  font-size: 0.95rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--color-tan);
+  background: var(--color-cream);
+  color: var(--color-dark-brown);
+  font-size: 1rem;
+}
+
+.login-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(174, 142, 120, 0.2);
+  border-color: var(--color-brown);
+}
+
+.login-submit-button {
+  border: none;
+  border-radius: 14px;
+  padding: 14px 18px;
+  background: var(--color-tan);
+  color: var(--color-offwhite);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-submit-button:hover {
+  background: var(--color-brown);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.toggle-button {
+  background: transparent;
+  border: none;
+  color: var(--color-brown);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.toggle-button:hover {
+  color: var(--color-dark-brown);
+}

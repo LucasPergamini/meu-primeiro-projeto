@@ -1,0 +1,46 @@
+.status-card {
+  max-width: 600px;
+  margin: 0 auto 28px;
+  padding: 24px;
+  background: var(--color-offwhite);
+  border: 2px solid var(--color-dark-brown);
+  border-radius: 18px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.status-title {
+  margin: 0 0 20px;
+  color: var(--color-dark-brown);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.status-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--color-cream);
+  border-radius: 14px;
+  border: 1px solid var(--color-tan);
+}
+
+.status-label {
+  color: var(--color-brown);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.status-value {
+  color: var(--color-dark-brown);
+  font-size: 1rem;
+  font-weight: 700;
+}
